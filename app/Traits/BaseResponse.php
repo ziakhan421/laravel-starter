@@ -6,9 +6,9 @@ use App\Helpers\CommonUtil;
 use App\Helpers\Constants;
 use App\Helpers\DateTimeConverter;
 use DateTimeInterface;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 use stdClass;
-use DateTime;
 
 /**
  * Class BaseResponse
@@ -24,7 +24,7 @@ trait BaseResponse
     }
 
     /**
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
     public static function emptyResponse()
     {
@@ -36,7 +36,7 @@ trait BaseResponse
      * @param int $code
      * @param string $status
      * @param array $data
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
     public static function buildResponse(int $code = Constants::HTTP_CODE_404, string $status = Constants::ERROR_MESSAGE_404, $data = [], string $request_id = null)
     {
@@ -55,7 +55,9 @@ trait BaseResponse
     /**
      * @param int $code
      * @param string $status
-     * @return \Illuminate\Http\JsonResponse
+     * @param string $message
+     * @param string|null $request_id
+     * @return JsonResponse
      */
     public static function statusResponse(int $code = Constants::HTTP_CODE_404, string $status = Constants::ERROR_MESSAGE_404, string $message = '', string $request_id = null)
     {
