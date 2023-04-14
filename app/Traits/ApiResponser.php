@@ -2,6 +2,8 @@
 
 namespace App\Traits;
 
+use Illuminate\Http\JsonResponse;
+
 trait ApiResponser
 {
 
@@ -14,7 +16,7 @@ trait ApiResponser
         ], $code);
     }
 
-    protected function errorResponse($code, $message = null): \Illuminate\Http\JsonResponse
+    protected function errorResponse($code, $message = null): JsonResponse
     {
         return response()->json([
             'status' => 'Error',
