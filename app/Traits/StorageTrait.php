@@ -11,9 +11,10 @@ trait StorageTrait
      * Save a file to the storage.
      *
      * @param object $file
-     * @param string $path
-     * @param string $fileName
-     * @return string|null
+     * @param $folder
+     * @param null $fileName
+     * @param string $disk
+     * @return bool|string|null
      */
     public function saveFileToDisk($file, $folder, $fileName = null, $disk = 'public'): bool|string|null
     {

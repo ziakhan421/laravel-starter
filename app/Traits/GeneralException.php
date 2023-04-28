@@ -6,6 +6,7 @@ use App\Helpers\CommonUtil;
 use App\Helpers\Constants;
 use App\Helpers\DateTimeConverter;
 use Exception;
+use Illuminate\Http\Request;
 use Throwable;
 
 class GeneralException extends Exception
@@ -40,7 +41,7 @@ class GeneralException extends Exception
     /**
      * Render the exception into an HTTP response.
      *
-     * @param \Illuminate\Http\Request
+     * @param Request
      * @return \null
      */
     public function render()
