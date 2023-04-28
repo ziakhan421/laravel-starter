@@ -47,9 +47,9 @@ trait StorageTrait
     /**
      * Move a file on disk
      *
-     * @param object $file
-     * @param string $path
-     * @param string $fileName
+     * @param string $filePath
+     * @param string $newPath
+     * @param string $disk
      * @return bool|string
      */
     public function moveFileOnDisk(string $filePath, string $newPath, string $disk = 'public'): bool|string
