@@ -9,12 +9,14 @@ use App\Models\User;
 use App\Traits\BaseResponse;
 use App\Traits\GeneralException;
 use App\Traits\StorageTrait;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use LaravelEasyRepository\Implementations\Eloquent;
 use Ichtrojan\Otp\Otp;
+use Throwable;
 
 class AuthRepositoryImplement extends Eloquent implements AuthRepository
 {
@@ -32,6 +34,9 @@ class AuthRepositoryImplement extends Eloquent implements AuthRepository
         $this->model = $model;
     }
 
+    /**
+     * @throws GeneralException
+     */
     public function login($request)
     {
         if (!Auth::attempt($request->only('email', 'password'))) {
@@ -53,7 +58,7 @@ class AuthRepositoryImplement extends Eloquent implements AuthRepository
     /**
      * @throws GeneralException
      */
-    public function register($request)
+    public function register($request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
@@ -140,7 +145,7 @@ class AuthRepositoryImplement extends Eloquent implements AuthRepository
 
         try {
             dispatch(new JobOtp($request->email, $data));
-        } catch (\Throwable $th) {
+        } catch (Throwable $th) {
             throw $th;
         }
 
@@ -210,7 +215,7 @@ class AuthRepositoryImplement extends Eloquent implements AuthRepository
 
         try {
             dispatch(new JobOtp($request->email, $data));
-        } catch (\Throwable $th) {
+        } catch (Throwable $th) {
             throw $th;
         }
 
@@ -265,7 +270,7 @@ class AuthRepositoryImplement extends Eloquent implements AuthRepository
         try {
             $user->password = Hash::make($request->password);
             $user->save();
-        } catch (\Throwable $th) {
+        } catch (Throwable $th) {
             throw new GeneralException(422, $th, Constants::HTTP_CODE_422);
         }
 
