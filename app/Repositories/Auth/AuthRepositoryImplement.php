@@ -129,6 +129,9 @@ class AuthRepositoryImplement extends Eloquent implements AuthRepository
         );
     }
 
+    /**
+     * @throws Throwable
+     */
     public function sendOtp($request)
     {
         $otp = new Otp;
@@ -157,6 +160,9 @@ class AuthRepositoryImplement extends Eloquent implements AuthRepository
         );
     }
 
+    /**
+     * @throws GeneralException
+     */
     public function verifyOtp($request)
     {
         $otp = new Otp;
