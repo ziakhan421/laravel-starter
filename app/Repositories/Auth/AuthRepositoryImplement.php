@@ -5,17 +5,16 @@ namespace App\Repositories\Auth;
 use App\Helpers\CommonUtil;
 use App\Helpers\Constants;
 use App\Jobs\JobOtp;
-use App\Jobs\JobSms;
 use App\Models\User;
 use App\Traits\BaseResponse;
 use App\Traits\GeneralException;
 use App\Traits\StorageTrait;
-use Hash;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 use LaravelEasyRepository\Implementations\Eloquent;
-use Otp;
-use Validator;
+use Ichtrojan\Otp\Otp;
 
 class AuthRepositoryImplement extends Eloquent implements AuthRepository
 {
@@ -51,6 +50,9 @@ class AuthRepositoryImplement extends Eloquent implements AuthRepository
         );
     }
 
+    /**
+     * @throws GeneralException
+     */
     public function register($request)
     {
         $validator = Validator::make($request->all(), [
