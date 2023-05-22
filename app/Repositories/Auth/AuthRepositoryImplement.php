@@ -181,6 +181,9 @@ class AuthRepositoryImplement extends Eloquent implements AuthRepository
         );
     }
 
+    /**
+     * @throws GeneralException
+     */
     public function changePassword($request)
     {
         $user = Auth::user();
