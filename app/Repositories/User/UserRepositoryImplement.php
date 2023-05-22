@@ -3,10 +3,10 @@
 namespace App\Repositories\User;
 
 use App\Helpers\Constants;
-use App\Jobs\JobEmail;
 use App\Models\User;
 use App\Traits\GeneralException;
 use App\Traits\StorageTrait;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use LaravelEasyRepository\Implementations\Eloquent;
