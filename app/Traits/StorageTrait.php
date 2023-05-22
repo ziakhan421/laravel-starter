@@ -34,7 +34,7 @@ trait StorageTrait
     /**
      * Get path of local path
      *
-     * @param object $filePath
+     * @param string $filePath
      * @param string $disk
      * @return bool|string
      */
@@ -97,7 +97,7 @@ trait StorageTrait
      *
      * @param string $filePath
      * @param string $disk
-     * @return string|bool
+     * @return bool
      */
     public function fileExists(string $filePath, string $disk = 'public'): bool
     {
