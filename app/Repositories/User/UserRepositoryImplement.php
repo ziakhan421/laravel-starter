@@ -27,6 +27,9 @@ class UserRepositoryImplement extends Eloquent implements UserRepository
         $this->model = $model;
     }
 
+    /**
+     * @throws GeneralException
+     */
     public function getUserById($id)
     {
         if (Auth::user()->role !== 'admin') {
