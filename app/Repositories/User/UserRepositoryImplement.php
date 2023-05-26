@@ -49,6 +49,9 @@ class UserRepositoryImplement extends Eloquent implements UserRepository
         return $this->model->all()->except(Auth::id());
     }
 
+    /**
+     * @throws GeneralException
+     */
     public function updateProfile($request)
     {
         $validator = Validator::make($request->all(), [
