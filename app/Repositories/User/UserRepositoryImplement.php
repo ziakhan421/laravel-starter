@@ -122,6 +122,9 @@ class UserRepositoryImplement extends Eloquent implements UserRepository
         return $user;
     }
 
+    /**
+     * @throws GeneralException
+     */
     public function delete($id)
     {
 
