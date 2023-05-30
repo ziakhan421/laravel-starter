@@ -7,14 +7,16 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Mail;
+use Illuminate\Support\Facades\Mail;
 use App\Mail\MailOtp;
 
 class JobOtp implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
     protected $send_mail;
     protected $data;
+
     /**
      * Create a new job instance.
      *
@@ -25,6 +27,7 @@ class JobOtp implements ShouldQueue
         $this->send_mail = $send_mail;
         $this->data = $data;
     }
+
     /**
      * Execute the job.
      *
