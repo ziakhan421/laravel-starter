@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Facades\SMSGateway;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -33,6 +34,6 @@ class JobSms implements ShouldQueue
      */
     public function handle()
     {
-        \App\Facades\SMSGateway::sendSMS($this->phone, $this->textSms);
+        SMSGateway::sendSMS($this->phone, $this->textSms);
     }
 }
