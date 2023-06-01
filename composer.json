@@ -16,7 +16,8 @@
         "ichtrojan/laravel-otp": "^1.4",
         "yaza/laravel-repository-service": "^3.2",
         "ext-curl": "*",
-        "ext-json": "*"
+        "ext-json": "*",
+      "ext-openssl": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
