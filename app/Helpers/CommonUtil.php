@@ -144,14 +144,12 @@ class CommonUtil
     public static function generateOtp($indentifier, $length = 6, $minutes = 5)
     {
         $otp = new Otp;
-
         return $otp->generate($indentifier, $length, $minutes);
     }
 
     public static function verifyOtp($indentifier, $code_otp)
     {
         $otp = new Otp;
-
         return $otp->validate($indentifier, $code_otp);
     }
 }

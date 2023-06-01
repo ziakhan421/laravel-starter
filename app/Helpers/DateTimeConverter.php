@@ -20,7 +20,7 @@ class DateTimeConverter
     /**
      * @param $dateTime
      * @param string $format
-     * @return false|string
+     * @return string
      */
     public static function dateTimeFormat($dateTime, string $format = 'Y-m-d')
     {
