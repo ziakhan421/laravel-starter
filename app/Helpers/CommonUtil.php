@@ -3,7 +3,7 @@
 namespace App\Helpers;
 
 use Illuminate\Support\Str;
-use Otp;
+use Ichtrojan\Otp\Models\Otp;
 
 /**
  * Class CommonUtil
