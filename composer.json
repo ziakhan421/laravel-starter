@@ -17,7 +17,7 @@
         "yaza/laravel-repository-service": "^3.2",
         "ext-curl": "*",
         "ext-json": "*",
-      "ext-openssl": "*"
+        "ext-openssl": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
