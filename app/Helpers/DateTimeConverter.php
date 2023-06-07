@@ -48,7 +48,7 @@ class DateTimeConverter
 
     /**
      * @param string $format
-     * @return false|string
+     * @return string
      */
     public static function dateTimeFormatNow(string $format)
     {
