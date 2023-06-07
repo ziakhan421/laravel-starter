@@ -58,7 +58,7 @@ class DateTimeConverter
     /**
      * @param $date_first
      * @param $date_end
-     * @return false|float
+     * @return float
      */
     public static function calculatingDateTimeDifference($date_first, $date_end)
     {
