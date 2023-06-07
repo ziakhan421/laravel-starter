@@ -29,7 +29,7 @@ class DateTimeConverter
 
     /**
      * @param $expire
-     * @return false|string
+     * @return string
      */
     public static function expiredMinute($expire)
     {
