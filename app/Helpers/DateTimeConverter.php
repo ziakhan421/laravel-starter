@@ -10,7 +10,7 @@ class DateTimeConverter
 {
 
     /**
-     * @return false|string
+     * @return string
      */
     public static function getDateTimeNow()
     {
