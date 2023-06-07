@@ -21,6 +21,7 @@
         <div style="float:right;padding:8px 0;color:#aaa;font-size:0.8em;line-height:1;font-weight:300">
             <p>Test Name</p>
             <p>Test Company</p>
+            <p>Test Company Phone</p>
             <p>Test Address</p>
             <p>Test Country</p>
         </div>
