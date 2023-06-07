@@ -39,7 +39,7 @@ class DateTimeConverter
     /**
      * @param $date
      * @param $second
-     * @return false|string
+     * @return string
      */
     public static function dateAddSecond($date, $second)
     {
