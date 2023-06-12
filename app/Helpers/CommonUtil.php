@@ -6,6 +6,7 @@ use Illuminate\Support\Str;
 use Ichtrojan\Otp\Models\Otp;
 
 /**
+ * 
  * Class CommonUtil
  * @package App\Utils
  */
