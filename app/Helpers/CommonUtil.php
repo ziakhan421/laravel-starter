@@ -6,7 +6,7 @@ use Illuminate\Support\Str;
 use Ichtrojan\Otp\Models\Otp;
 
 /**
- * 
+ *
  * Class CommonUtil
  * @package App\Utils
  */
@@ -121,9 +121,10 @@ class CommonUtil
     }
 
     /**
+     * @param int $number
      * @return string
      */
-    public static function strGenerate($number = 6)
+    public static function strGenerate(int $number = 6): string
     {
         return Str::random($number);
     }
