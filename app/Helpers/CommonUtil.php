@@ -6,7 +6,6 @@ use Illuminate\Support\Str;
 use Ichtrojan\Otp\Models\Otp;
 
 /**
- *
  * Class CommonUtil
  * @package App\Utils
  */
@@ -26,7 +25,6 @@ class CommonUtil
 
     /**
      * @param $code
-     * @param $running_number
      * @return string
      */
     public static function generateInvoiceNumber($code, $running_number): string
@@ -121,10 +119,9 @@ class CommonUtil
     }
 
     /**
-     * @param int $number
      * @return string
      */
-    public static function strGenerate(int $number = 6): string
+    public static function strGenerate($number = 6)
     {
         return Str::random($number);
     }
