@@ -31,7 +31,7 @@ class DateTimeConverter
      * @param $expire
      * @return string
      */
-    public static function expiredMinute($expire)
+    public static function expiredMinute($expire): string
     {
         return date("Y-m-d H:i:s", strtotime("+$expire min"));
     }
