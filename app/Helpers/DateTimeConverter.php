@@ -12,7 +12,7 @@ class DateTimeConverter
     /**
      * @return string
      */
-    public static function getDateTimeNow()
+    public static function getDateTimeNow(): string
     {
         return date('Y-m-d H:i:s');
     }
@@ -22,7 +22,7 @@ class DateTimeConverter
      * @param string $format
      * @return string
      */
-    public static function dateTimeFormat($dateTime, string $format = 'Y-m-d')
+    public static function dateTimeFormat($dateTime, string $format = 'Y-m-d'): string
     {
         return date($format, strtotime($dateTime));
     }
@@ -31,7 +31,7 @@ class DateTimeConverter
      * @param $expire
      * @return string
      */
-    public static function expiredMinute($expire)
+    public static function expiredMinute($expire): string
     {
         return date("Y-m-d H:i:s", strtotime("+$expire min"));
     }
