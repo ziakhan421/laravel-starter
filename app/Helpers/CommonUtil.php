@@ -25,6 +25,7 @@ class CommonUtil
 
     /**
      * @param $code
+     * @param $running_number
      * @return string
      */
     public static function generateInvoiceNumber($code, $running_number): string
